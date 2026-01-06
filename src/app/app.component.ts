@@ -12,5 +12,11 @@ export class AppComponent {
   //   this._cdRef.detectChanges();
   // }
 
-  teste = 'Kuririn';
+  // teste = 'Kuririn';
+
+  clicou(input: HTMLInputElement) {
+    console.log(input.value);
+
+    input.value = 'Atualizado';
+  }
 }
