@@ -1,5 +1,5 @@
-<input type="text" #meuInput />
+<input type="text" #meuInput  [(ngModel)]="teste"/>
 
-Valor: {{ meuInput.value }}
+Valor: {{ teste }}
 
-<button (click)="changeDetection()">Detectar</button>
+<!-- <button (click)="changeDetection()">Detectar</button> -->

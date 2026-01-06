@@ -6,9 +6,11 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private _cdRef: ChangeDetectorRef) {}
+  // constructor(private _cdRef: ChangeDetectorRef) {}
 
-  changeDetection() {
-    this._cdRef.detectChanges();
-  }
+  // changeDetection() {
+  //   this._cdRef.detectChanges();
+  // }
+
+  teste = 'Kuririn';
 }
