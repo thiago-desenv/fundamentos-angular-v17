@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { FilhoComponent } from './filho/filho.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,9 @@ export class AppComponent {
 
   @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
 
+  @ViewChild('filhoComponente') filhoCompRef!: FilhoComponent;
+  @ViewChild(FilhoComponent) filhoCompClass!: FilhoComponent;
+
   updateInputText() {
     console.log(this.meuInputEl);
     this.meuInputEl.nativeElement.value = 'Kuririn';
@@ -35,6 +39,14 @@ export class AppComponent {
 
   updateContent() {
     this.minhaDivEl.nativeElement.textContent = 'Kuririn';
+  }
+
+  sayHello() {
+    this.filhoCompRef.sayHello();
+  }
+
+  sayHello_2() {
+    this.filhoCompClass.sayHello();
   }
 }
 
