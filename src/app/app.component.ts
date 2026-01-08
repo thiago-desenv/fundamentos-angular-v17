@@ -26,6 +26,10 @@ export class AppComponent {
     console.log(this.meuInputEl);
     this.meuInputEl.nativeElement.value = 'Kuririn';
   }
+
+  focusElementInput() {
+    this.meuInputEl.nativeElement.focus();
+  }
 }
 
 // const funcaoPai = () => {
