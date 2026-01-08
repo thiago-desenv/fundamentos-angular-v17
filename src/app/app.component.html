@@ -4,3 +4,18 @@ Valor: {{ meuInput.value }} -->
 
 <!-- <button (click)="changeDetection()">Detectar</button> -->
  <!-- <button (click)="clicou(meuInput)">Atualizar</button> -->
+
+<div class="primo">
+  <!-- Primo: {{ inputPai.value }} -->
+</div>
+
+<div class="pai" *ngIf="true">
+  <input #inputPai ngModel>
+  Pai: {{ inputFilho.value }}
+
+ <div class="filho"> <!-- </div> <div class="filho" *ngIf="true">-->
+    Filho: <input #inputFilho ngModel >
+
+    Filho: {{ inputPai.value }}
+  </div>
+</div>

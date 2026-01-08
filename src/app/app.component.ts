@@ -22,16 +22,16 @@ export class AppComponent {
 
 }
 
-const funcaoPai = () => {
-  let pai = 'pai';
+// const funcaoPai = () => {
+//   let pai = 'pai';
 
-  const funcaoFilha = () => {
-    let filha = 'filha';
-    pai = 'pai_2';
+//   const funcaoFilha = () => {
+//     let filha = 'filha';
+//     pai = 'pai_2';
 
-    const funcaoNeto = () => {
-      filha = 'Filha_2';
-      pai = 'pai_3';
-    }
-  }
-}
+//     const funcaoNeto = () => {
+//       filha = 'Filha_2';
+//       pai = 'pai_3';
+//     }
+//   }
+// }
