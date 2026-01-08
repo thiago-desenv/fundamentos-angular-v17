@@ -22,6 +22,8 @@ export class AppComponent {
 
   @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
 
+  @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
+
   updateInputText() {
     console.log(this.meuInputEl);
     this.meuInputEl.nativeElement.value = 'Kuririn';
@@ -29,6 +31,10 @@ export class AppComponent {
 
   focusElementInput() {
     this.meuInputEl.nativeElement.focus();
+  }
+
+  updateContent() {
+    this.minhaDivEl.nativeElement.textContent = 'Kuririn';
   }
 }
 
