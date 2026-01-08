@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +20,12 @@ export class AppComponent {
   //   input.value = 'Atualizado';
   // }
 
+  @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
+
+  updateInputText() {
+    console.log(this.meuInputEl);
+    this.meuInputEl.nativeElement.value = 'Kuririn';
+  }
 }
 
 // const funcaoPai = () => {
