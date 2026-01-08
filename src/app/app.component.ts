@@ -14,9 +14,24 @@ export class AppComponent {
 
   // teste = 'Kuririn';
 
-  clicou(input: HTMLInputElement) {
-    console.log(input.value);
+  // clicou(input: HTMLInputElement) {
+  //   console.log(input.value);
 
-    input.value = 'Atualizado';
+  //   input.value = 'Atualizado';
+  // }
+
+}
+
+const funcaoPai = () => {
+  let pai = 'pai';
+
+  const funcaoFilha = () => {
+    let filha = 'filha';
+    pai = 'pai_2';
+
+    const funcaoNeto = () => {
+      filha = 'Filha_2';
+      pai = 'pai_3';
+    }
   }
 }
