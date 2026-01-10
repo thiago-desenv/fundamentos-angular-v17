@@ -11,6 +11,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   constructor() {
     console.log('constructor');
   }
+
   ngAfterViewInit() {
     console.log('ngAfterViewInit', this.meuInputEl);
     this.meuInputEl.nativeElement.focus();
@@ -36,7 +37,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   //   input.value = 'Atualizado';
   // }
 
-  @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
+  @ViewChild('meuInput', { static: true }) meuInputEl!: ElementRef<HTMLInputElement>;
 
   @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
 
