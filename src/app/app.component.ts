@@ -16,11 +16,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     console.log('ngAfterViewInit', this.meuInputEl);
     console.log('meuButton', this.buttonsEl);
     this.meuInputEl.nativeElement.focus();
+    console.log(this.buttonsEl.toArray());
+    this.buttonsEl.toArray()[0].nativeElement.style.backgroundColor = 'green';
   }
 
   ngOnInit() {
-    console.log('ngOnInit', this.meuInputEl);
-    this.meuInputEl.nativeElement.focus();
+    // console.log('ngOnInit', this.meuInputEl);
+    // this.meuInputEl.nativeElement.focus();
   }
 
   buttonList = [ 'Botão_1', 'Botão_2', 'Botão_2' ];
