@@ -34,4 +34,10 @@ Meu input: <input type="text" #meuInput >
 <button (click)="sayHello()">Say hello</button>
 <button (click)="sayHello_2()">Say hello_2</button>
 
-Meu input: <input type="text" #meuInput>
+Meu input: <input type="text" #meuInput *ngIf="true">
+
+<br>
+<br>
+<br>
+<button #meuButton *ngFor="let button of buttonList" (click)="changeColor($event)">{{button}}</button>
+<button (click)="resetButtons()">Resetar cores botão</button>

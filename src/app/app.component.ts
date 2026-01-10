@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -14,12 +14,32 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit', this.meuInputEl);
+    console.log('meuButton', this.buttonsEl);
     this.meuInputEl.nativeElement.focus();
   }
 
   ngOnInit() {
     console.log('ngOnInit', this.meuInputEl);
     this.meuInputEl.nativeElement.focus();
+  }
+
+  buttonList = [ 'Botão_1', 'Botão_2', 'Botão_2' ];
+
+  @ViewChildren('meuButton') buttonsEl!: QueryList<ElementRef<HTMLButtonElement>>;
+
+  changeColor(elementButton: Event) {
+    console.log(elementButton);
+    const btn = elementButton.target as HTMLButtonElement;
+    btn.style.backgroundColor = 'red';
+    btn.style.color = 'white';
+  }
+
+  resetButtons() {
+    this.buttonsEl.forEach((btnEl) => {
+      console.log(btnEl);
+      btnEl.nativeElement.style.backgroundColor = '';
+      btnEl.nativeElement.style.color = '';
+    });
   }
 
 
@@ -37,7 +57,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   //   input.value = 'Atualizado';
   // }
 
-  @ViewChild('meuInput', { static: true }) meuInputEl!: ElementRef<HTMLInputElement>;
+  // @ViewChild('meuInput', { static: true }) meuInputEl!: ElementRef<HTMLInputElement>;
+  @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
 
   @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
 
