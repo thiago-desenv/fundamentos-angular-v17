@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -6,7 +6,22 @@ import { FilhoComponent } from './filho/filho.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
+
+  constructor() {
+    console.log('constructor');
+  }
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit', this.meuInputEl);
+    this.meuInputEl.nativeElement.focus();
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit', this.meuInputEl);
+    this.meuInputEl.nativeElement.focus();
+  }
+
+
   // constructor(private _cdRef: ChangeDetectorRef) {}
 
   // changeDetection() {
