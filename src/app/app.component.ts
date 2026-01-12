@@ -8,6 +8,8 @@ import { FilhoComponent } from './filho/filho.component';
 })
  export class AppComponent /*implements OnInit, AfterViewInit*/ {
 
+
+
   // constructor() {
   //   console.log('constructor');
   // }

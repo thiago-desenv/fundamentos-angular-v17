@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './sem-diretiva.component.scss'
 })
 export class SemDiretivaComponent {
+  addBgColor: boolean = false;
+  changeBackgroundOver() {
+    this.addBgColor = true;
+  }
 
+  changeBackgroundOut() {
+    this.addBgColor = false;
+  }
 }
