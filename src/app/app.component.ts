@@ -18,6 +18,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.meuInputEl.nativeElement.focus();
     console.log(this.buttonsEl.toArray());
     this.buttonsEl.toArray()[0].nativeElement.style.backgroundColor = 'green';
+
+    this.buttonsEl.changes.subscribe((result) => {
+      console.log('changes', result);
+    });
   }
 
   ngOnInit() {
@@ -55,6 +59,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     const primeiroToArray = this.buttonsEl.toArray()[2]!;
     primeiroToArray.nativeElement.style.backgroundColor = 'blue';
     primeiroToArray.nativeElement.style.color = 'white';
+  }
+
+  removeItem() {
+    this.buttonList.shift();
   }
 
 
