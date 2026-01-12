@@ -41,3 +41,7 @@ Meu input: <input type="text" #meuInput *ngIf="true">
 <br>
 <button #meuButton *ngFor="let button of buttonList" (click)="changeColor($event)">{{button}}</button>
 <button (click)="resetButtons()">Resetar cores botão</button>
+<br>
+<br>
+<button (click)="firstItem()">Pegar primeiro</button>
+

@@ -44,6 +44,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
 
+  firstItem() {
+    const primeiroButton = this.buttonsEl.get(0)!;
+    console.log(primeiroButton);
+    primeiroButton.nativeElement.style.backgroundColor = 'purple';
+  }
+
 
   // constructor(private _cdRef: ChangeDetectorRef) {}
 
