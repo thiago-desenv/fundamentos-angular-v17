@@ -39,7 +39,7 @@ Meu input: <input type="text" #meuInput *ngIf="true">
 <br>
 <br>
 <br>
-<button #meuButton *ngFor="let button of buttonList" (click)="changeColor($event)">{{button}}</button>
+<button #meuButton class="btn-{{ i }}" *ngFor="let button of buttonList; let i = index" (click)="changeColor($event)">{{button}}</button>
 <button (click)="resetButtons()">Resetar cores botão</button>
 <br>
 <br>
