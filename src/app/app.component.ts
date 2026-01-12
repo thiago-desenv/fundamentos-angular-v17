@@ -6,64 +6,64 @@ import { FilhoComponent } from './filho/filho.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+ export class AppComponent /*implements OnInit, AfterViewInit*/ {
 
-  constructor() {
-    console.log('constructor');
-  }
+  // constructor() {
+  //   console.log('constructor');
+  // }
 
-  ngAfterViewInit() {
-    console.log('ngAfterViewInit', this.meuInputEl);
-    console.log('meuButton', this.buttonsEl);
-    this.meuInputEl.nativeElement.focus();
-    console.log(this.buttonsEl.toArray());
-    this.buttonsEl.toArray()[0].nativeElement.style.backgroundColor = 'green';
+  // ngAfterViewInit() {
+  //   console.log('ngAfterViewInit', this.meuInputEl);
+  //   console.log('meuButton', this.buttonsEl);
+  //   this.meuInputEl.nativeElement.focus();
+  //   console.log(this.buttonsEl.toArray());
+  //   this.buttonsEl.toArray()[0].nativeElement.style.backgroundColor = 'green';
 
-    this.buttonsEl.changes.subscribe((result) => {
-      console.log('changes', result);
-    });
-  }
+  //   this.buttonsEl.changes.subscribe((result) => {
+  //     console.log('changes', result);
+  //   });
+  // }
 
-  ngOnInit() {
+  // ngOnInit() {
     // console.log('ngOnInit', this.meuInputEl);
     // this.meuInputEl.nativeElement.focus();
-  }
+  // }
 
-  buttonList = [ 'Botão_1', 'Botão_2', 'Botão_2' ];
+  // buttonList = [ 'Botão_1', 'Botão_2', 'Botão_2' ];
 
-  @ViewChildren('meuButton') buttonsEl!: QueryList<ElementRef<HTMLButtonElement>>;
+  // @ViewChildren('meuButton') buttonsEl!: QueryList<ElementRef<HTMLButtonElement>>;
 
-  changeColor(elementButton: Event) {
-    console.log(elementButton);
-    const btn = elementButton.target as HTMLButtonElement;
-    btn.style.backgroundColor = 'red';
-    btn.style.color = 'white';
-  }
+  // changeColor(elementButton: Event) {
+  //   console.log(elementButton);
+  //   const btn = elementButton.target as HTMLButtonElement;
+  //   btn.style.backgroundColor = 'red';
+  //   btn.style.color = 'white';
+  // }
 
-  resetButtons() {
-    this.buttonsEl.forEach((btnEl) => {
-      console.log(btnEl);
-      btnEl.nativeElement.style.backgroundColor = '';
-      btnEl.nativeElement.style.color = '';
-    });
-  }
+  // resetButtons() {
+  //   this.buttonsEl.forEach((btnEl) => {
+  //     console.log(btnEl);
+  //     btnEl.nativeElement.style.backgroundColor = '';
+  //     btnEl.nativeElement.style.color = '';
+  //   });
+  // }
 
-  firstItem() {
-    const primeiroButton = this.buttonsEl.get(0)!;
-    console.log(primeiroButton);
-    primeiroButton.nativeElement.style.backgroundColor = 'purple';
+  // firstItem() {
+  //   const primeiroButton = this.buttonsEl.get(0)!;
+  //   console.log(primeiroButton);
+  //   primeiroButton.nativeElement.style.backgroundColor = 'purple';
 
-    const primeiroFindClass = this.buttonsEl.find((btnEl) => btnEl.nativeElement.className === 'btn-1')!;
-    primeiroFindClass.nativeElement.style.backgroundColor = 'red';
+  //   const primeiroFindClass = this.buttonsEl.find((btnEl) => btnEl.nativeElement.className === 'btn-1')!;
+  //   primeiroFindClass.nativeElement.style.backgroundColor = 'red';
 
-    const primeiroToArray = this.buttonsEl.toArray()[2]!;
-    primeiroToArray.nativeElement.style.backgroundColor = 'blue';
-    primeiroToArray.nativeElement.style.color = 'white';
-  }
+  //   const primeiroToArray = this.buttonsEl.toArray()[2]!;
+  //   primeiroToArray.nativeElement.style.backgroundColor = 'blue';
+  //   primeiroToArray.nativeElement.style.color = 'white';
+  // }
 
-  removeItem() {
-    this.buttonList.shift();
-  }
+  // removeItem() {
+  //   this.buttonList.shift();
+  // }
 
 
   // constructor(private _cdRef: ChangeDetectorRef) {}
@@ -81,33 +81,33 @@ export class AppComponent implements OnInit, AfterViewInit {
   // }
 
   // @ViewChild('meuInput', { static: true }) meuInputEl!: ElementRef<HTMLInputElement>;
-  @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
+  // @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
 
-  @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
+  // @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
 
-  @ViewChild('filhoComponente') filhoCompRef!: FilhoComponent;
-  @ViewChild(FilhoComponent) filhoCompClass!: FilhoComponent;
+  // @ViewChild('filhoComponente') filhoCompRef!: FilhoComponent;
+  // @ViewChild(FilhoComponent) filhoCompClass!: FilhoComponent;
 
-  updateInputText() {
-    console.log(this.meuInputEl);
-    this.meuInputEl.nativeElement.value = 'Kuririn';
-  }
+  // updateInputText() {
+  //   console.log(this.meuInputEl);
+  //   this.meuInputEl.nativeElement.value = 'Kuririn';
+  // }
 
-  focusElementInput() {
-    this.meuInputEl.nativeElement.focus();
-  }
+  // focusElementInput() {
+  //   this.meuInputEl.nativeElement.focus();
+  // }
 
-  updateContent() {
-    this.minhaDivEl.nativeElement.textContent = 'Kuririn';
-  }
+  // updateContent() {
+  //   this.minhaDivEl.nativeElement.textContent = 'Kuririn';
+  // }
 
-  sayHello() {
-    this.filhoCompRef.sayHello();
-  }
+  // sayHello() {
+  //   this.filhoCompRef.sayHello();
+  // }
 
-  sayHello_2() {
-    this.filhoCompClass.sayHello();
-  }
+  // sayHello_2() {
+  //   this.filhoCompClass.sayHello();
+  // }
 }
 
 // const funcaoPai = () => {
