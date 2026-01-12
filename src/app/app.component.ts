@@ -51,6 +51,10 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     const primeiroFindClass = this.buttonsEl.find((btnEl) => btnEl.nativeElement.className === 'btn-1')!;
     primeiroFindClass.nativeElement.style.backgroundColor = 'red';
+
+    const primeiroToArray = this.buttonsEl.toArray()[2]!;
+    primeiroToArray.nativeElement.style.backgroundColor = 'blue';
+    primeiroToArray.nativeElement.style.color = 'white';
   }
 
 
