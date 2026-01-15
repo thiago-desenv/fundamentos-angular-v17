@@ -1,6 +1,17 @@
 <app-sem-diretiva></app-sem-diretiva>
 <app-com-diretiva></app-com-diretiva>
 
+<button disabled>Meu botão</button>
+<br>
+<br>
+<button [attr.disabled]="false">Meu botão</button>
+<br>
+<br>
+<button [disabled]="true">Meu botão prop</button>
+<br>
+<br>
+<button appDisabled>Meu botão attr diretiva</button>
+
 <!-- <input type="text" #meuInput ngModel />
 
 Valor: {{ meuInput.value }} -->
