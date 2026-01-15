@@ -11,6 +11,12 @@
 <br>
 <br>
 <button appDisabled>Meu botão attr diretiva</button>
+<br>
+<br>
+<p style="background-color: orange; color: white;">Parágrafo normal</p>
+<p [attr.style]="'background-color: black; color: white;'">Parágrafo com attr</p>
+<p [style]="{backgroundColor: 'red', color: 'white'}">Parágrafo com property</p>
+<p appStyle>Parágrafo com diretiva</p>
 
 <!-- <input type="text" #meuInput ngModel />
 
