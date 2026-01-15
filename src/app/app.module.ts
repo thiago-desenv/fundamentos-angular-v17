@@ -7,13 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { FilhoComponent } from './filho/filho.component';
 import { SemDiretivaComponent } from './sem-diretiva/sem-diretiva.component';
 import { ComDiretivaComponent } from './com-diretiva/com-diretiva.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilhoComponent,
     SemDiretivaComponent,
-    ComDiretivaComponent
+    ComDiretivaComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
