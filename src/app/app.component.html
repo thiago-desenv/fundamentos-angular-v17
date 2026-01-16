@@ -3,27 +3,22 @@
 
 <button disabled>Meu botão</button>
 <br>
-<br>
 <button [attr.disabled]="false">Meu botão</button>
-<br>
 <br>
 <button [disabled]="true">Meu botão prop</button>
 <br>
-<br>
 <button appDisabled>Meu botão attr diretiva</button>
-<br>
 <br>
 <p style="background-color: orange; color: white;">Parágrafo normal</p>
 <p [attr.style]="'background-color: black; color: white;'">Parágrafo com attr</p>
 <p [style]="{backgroundColor: 'red', color: 'white'}">Parágrafo com property</p>
 <p appStyle>Parágrafo com diretiva</p>
-<br>
-<br>
 <p class="meu-texto">Normal</p>
 <p [attr.class]="'meu-texto'">Attr</p>
 <p [className]="'meu-texto meu-size'">Prop class name</p>
 <p [class]="{ 'meu-texto': true, 'meu-size': true }">Prop class</p>
 <p appClass>Diretiva</p>
+<input appListener>
 <!-- <input type="text" #meuInput ngModel />
 
 Valor: {{ meuInput.value }} -->
