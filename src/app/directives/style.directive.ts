@@ -9,5 +9,5 @@ export class StyleDirective {
   // @HostBinding('style') propStyleObj = { backgroundColor: 'pink', color: 'white' };
   // @HostBinding('style.backgroundColor') bgColor = 'green';
   // @HostBinding('style.color') color = 'white';
-  @HostBinding('style.fontSize.px') size = 100;
+  @HostBinding('style.fontSize.px') size = 40;
 }
