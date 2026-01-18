@@ -4,8 +4,8 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
   selector: '[appInputBackgroundDirective]'
 })
 export class InputBackgroundDirectiveDirective {
-  @Input() appInputBackgroundDirective: string = 'white';
-  @Input() textColor: string = 'black';
+  @Input('bgColor') appInputBackgroundDirective: string = 'white';
+  @Input('tColor') textColor: string = 'black';
 
   @HostBinding('style.background-color') backgroundColor = 'transparent';
   @HostBinding('style.color') color: string = '';
