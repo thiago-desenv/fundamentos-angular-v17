@@ -7,7 +7,7 @@ import { FilhoComponent } from './filho/filho.component';
   styleUrls: ['./app.component.scss']
 })
  export class AppComponent /*implements OnInit, AfterViewInit*/ {
-
+  appBgColor = 'purple';
 
 
   // constructor() {
