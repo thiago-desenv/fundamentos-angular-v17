@@ -6,8 +6,19 @@ import { FilhoComponent } from './filho/filho.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
- export class AppComponent /*implements OnInit, AfterViewInit*/ {
-  appBgColor = 'purple';
+ export class AppComponent implements AfterViewInit /*implements OnInit, AfterViewInit*/ {
+    appBgColor = 'purple';
+    @ViewChild('minhaDiv') divEl!: ElementRef<HTMLDivElement>;
+
+  ngAfterViewInit() {
+    this.divEl.nativeElement.style.backgroundColor = 'brown';
+    this.divEl.nativeElement.textContent = 'Sou uma div';
+    this.divEl.nativeElement.classList.add('minha-classe');
+  }
+
+
+
+
 
 
   // constructor() {
