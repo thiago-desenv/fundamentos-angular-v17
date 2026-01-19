@@ -16,6 +16,14 @@ import { FilhoComponent } from './filho/filho.component';
     console.log(this._elRef);
     console.log(this._elRef.nativeElement);
     const divEl = this._elRef.nativeElement.querySelector('#minha-outra-div') as HTMLDivElement;
+
+    let textDiv = 'Sou a outra div';
+
+    divEl.textContent = textDiv;
+    divEl.style.backgroundColor = 'blue';
+    divEl.style.color = 'white';
+    divEl.style.marginTop = '2px';
+    divEl.addEventListener('click', () => { alert(textDiv) })
     console.log(divEl);
   }
 
