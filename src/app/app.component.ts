@@ -23,7 +23,7 @@ import { FilhoComponent } from './filho/filho.component';
     divEl.style.backgroundColor = 'blue';
     divEl.style.color = 'white';
     divEl.style.marginTop = '2px';
-    divEl.addEventListener('click', () => { alert(textDiv) })
+    divEl.addEventListener('click', () => { alert(textDiv) });
     console.log(divEl);
   }
 
@@ -31,6 +31,13 @@ import { FilhoComponent } from './filho/filho.component';
     this.divEl.nativeElement.style.backgroundColor = 'brown';
     this.divEl.nativeElement.textContent = 'Sou uma div';
     this.divEl.nativeElement.classList.add('minha-classe');
+  }
+
+  createElement() {
+    const novaDiv = document.createElement('div');
+    novaDiv.textContent = 'Nova div';
+    novaDiv.classList.add('bg-red');
+    this._elRef.nativeElement.appendChild(novaDiv);
   }
 
 
