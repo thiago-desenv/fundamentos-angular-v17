@@ -13,6 +13,7 @@ import { StyleDirective } from './directives/style.directive';
 import { ClassDirective } from './directives/class.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirectiveDirective } from './directives/input-background.directive.directive';
+import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { InputBackgroundDirectiveDirective } from './directives/input-background
     StyleDirective,
     ClassDirective,
     ListenerDirective,
-    InputBackgroundDirectiveDirective
+    InputBackgroundDirectiveDirective,
+    FocusSecondInputDirective
   ],
   imports: [
     BrowserModule,
