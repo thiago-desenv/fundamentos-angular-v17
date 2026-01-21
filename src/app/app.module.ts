@@ -14,6 +14,7 @@ import { ClassDirective } from './directives/class.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirectiveDirective } from './directives/input-background.directive.directive';
 import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
+import { XssComponent } from './xss/xss.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FocusSecondInputDirective } from './directives/focus-second-input.direc
     ClassDirective,
     ListenerDirective,
     InputBackgroundDirectiveDirective,
-    FocusSecondInputDirective
+    FocusSecondInputDirective,
+    XssComponent
   ],
   imports: [
     BrowserModule,
