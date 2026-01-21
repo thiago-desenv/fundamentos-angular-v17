@@ -1,3 +1,4 @@
+import { TesteService } from './services/teste.service';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
@@ -10,7 +11,10 @@ import { FilhoComponent } from './filho/filho.component';
   appBgColor = 'purple';
   @ViewChild('minhaDiv') divEl!: ElementRef<HTMLDivElement>;
 
-  constructor(private readonly _elRef: ElementRef) { }
+  constructor(
+    private readonly _elRef: ElementRef,
+    private readonly _testeService: TesteService
+  ) { }
 
   ngOnInit() {
     console.log(this._elRef);
@@ -25,6 +29,7 @@ import { FilhoComponent } from './filho/filho.component';
     divEl.style.marginTop = '2px';
     divEl.addEventListener('click', () => { alert(textDiv) });
     console.log(divEl);
+    this._testeService.create(this._elRef);
   }
 
   ngAfterViewInit() {
