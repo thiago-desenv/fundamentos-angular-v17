@@ -26,8 +26,8 @@ export class XssComponent implements AfterViewInit {
     const divEl = this._renderer2.createElement('div') as HTMLDivElement;
     const text = this._renderer2.createText(value);
     this._renderer2.appendChild(divEl, text);
-    this._renderer2.setStyle(divEl, 'backgroundColor', 'red');
-    this._renderer2.setStyle(divEl, 'color', 'white');
+    // this._renderer2.setStyle(divEl, 'backgroundColor', 'red');
+    this._renderer2.addClass(divEl, 'bg-red');
     this._renderer2.appendChild(this._elRef.nativeElement, divEl);
   }
 }
