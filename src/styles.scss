@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+body {
+  background-color: darkgray;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ca-u-card-text-title {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.ca-u-card-text-subtitle {
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.ca-u-card-text-description {
+  font-weight: 300;
+  font-size: 20px;
+}
+
 .meu-texto {
   background-color: orange;
   color: white
