@@ -18,6 +18,7 @@ import { XssComponent } from './xss/xss.component';
 import { CardTextTitleDirective } from './components/card/directives/card-text-title.directive';
 import { CardTextSubtitleDirective } from './components/card/directives/card-text-subtitle.directive';
 import { CardTextDescriptionDirective } from './components/card/directives/card-text-description.directive';
+import { CardAvatarSmallDirective } from './components/card/directives/card-avatar-small.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CardTextDescriptionDirective } from './components/card/directives/card-
     XssComponent,
     CardTextTitleDirective,
     CardTextSubtitleDirective,
-    CardTextDescriptionDirective
+    CardTextDescriptionDirective,
+    CardAvatarSmallDirective
   ],
   imports: [
     BrowserModule,
