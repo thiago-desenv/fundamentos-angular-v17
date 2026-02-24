@@ -19,23 +19,23 @@ import { FilhoComponent } from './filho/filho.component';
   ngOnInit() {
     console.log(this._elRef);
     console.log(this._elRef.nativeElement);
-    const divEl = this._elRef.nativeElement.querySelector('#minha-outra-div') as HTMLDivElement;
+    // const divEl = this._elRef.nativeElement.querySelector('#minha-outra-div') as HTMLDivElement;
 
     let textDiv = 'Sou a outra div';
 
-    divEl.textContent = textDiv;
-    divEl.style.backgroundColor = 'blue';
-    divEl.style.color = 'white';
-    divEl.style.marginTop = '2px';
-    divEl.addEventListener('click', () => { alert(textDiv) });
-    console.log(divEl);
-    this._testeService.create(this._elRef);
+    // divEl.textContent = textDiv;
+    // divEl.style.backgroundColor = 'blue';
+    // divEl.style.color = 'white';
+    // divEl.style.marginTop = '2px';
+    // divEl.addEventListener('click', () => { alert(textDiv) });
+    // console.log(divEl);
+    // this._testeService.create(this._elRef);
   }
 
   ngAfterViewInit() {
-    this.divEl.nativeElement.style.backgroundColor = 'brown';
-    this.divEl.nativeElement.textContent = 'Sou uma div';
-    this.divEl.nativeElement.classList.add('minha-classe');
+    //this.divEl.nativeElement.style.backgroundColor = 'brown';
+    // this.divEl.nativeElement.textContent = 'Sou uma div';
+    // this.divEl.nativeElement.classList.add('minha-classe');
   }
 
   createElement() {
