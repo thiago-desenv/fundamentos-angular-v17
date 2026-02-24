@@ -17,6 +17,7 @@ import { FocusSecondInputDirective } from './directives/focus-second-input.direc
 import { XssComponent } from './xss/xss.component';
 import { CardTextTitleDirective } from './components/card/directives/card-text-title.directive';
 import { CardTextSubtitleDirective } from './components/card/directives/card-text-subtitle.directive';
+import { CardTextDescriptionDirective } from './components/card/directives/card-text-description.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CardTextSubtitleDirective } from './components/card/directives/card-tex
     FocusSecondInputDirective,
     XssComponent,
     CardTextTitleDirective,
-    CardTextSubtitleDirective
+    CardTextSubtitleDirective,
+    CardTextDescriptionDirective
   ],
   imports: [
     BrowserModule,
