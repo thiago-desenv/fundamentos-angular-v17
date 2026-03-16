@@ -20,6 +20,8 @@ import { CardTextSubtitleDirective } from './components/card/directives/card-tex
 import { CardTextDescriptionDirective } from './components/card/directives/card-text-description.directive';
 import { CardAvatarSmallDirective } from './components/card/directives/card-avatar-small.directive';
 import { CardAvatarLargeDirective } from './components/card/directives/card-avatar-large.directive';
+import { MeuCompComponent } from './meu-comp/meu-comp.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CardAvatarLargeDirective } from './components/card/directives/card-avat
     CardTextSubtitleDirective,
     CardTextDescriptionDirective,
     CardAvatarSmallDirective,
-    CardAvatarLargeDirective
+    CardAvatarLargeDirective,
+    MeuCompComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
