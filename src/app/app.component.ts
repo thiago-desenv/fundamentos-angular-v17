@@ -5,7 +5,7 @@ import { FilhoComponent } from './filho/filho.component';
 @Component({
   selector: 'app-root',
   // templateUrl: './app.component.html',
-  templateUrl: './ng-template-outlet/ex4.html',
+  templateUrl: './ng-if/ex1.html',
   styleUrls: ['./app.component.scss']
 })
  export class AppComponent /*implements OnInit ,AfterViewInit*/ {
