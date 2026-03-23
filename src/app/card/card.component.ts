@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, ContentChild, HostBinding, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,9 +6,11 @@ import { Component, HostBinding, Input, OnInit, TemplateRef } from '@angular/cor
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
+  @ContentChild('meuTemplate') content!: TemplateRef<any>;
+
   // condition: boolean = false;
 
-  @Input({ required: true }) header!: TemplateRef<any>;
-  @Input({ required: true }) content!: TemplateRef<any>;
-  @Input() footer!: TemplateRef<any>;
+  // @Input({ required: true }) header!: TemplateRef<any>;
+  // @Input({ required: true }) content!: TemplateRef<any>;
+  // @Input() footer!: TemplateRef<any>;
 }
