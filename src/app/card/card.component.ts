@@ -6,6 +6,7 @@ import { AfterContentInit, AfterViewInit, Component, ContentChild, HostBinding, 
   styleUrl: './card.component.scss'
 })
 export class CardComponent implements OnInit, AfterContentInit, AfterViewInit {
+  condition: boolean = true;
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit', this.content);
   }
