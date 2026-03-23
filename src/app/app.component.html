@@ -1,4 +1,18 @@
-<div>
+<ng-template #headerTemplate>
+  <p>Sou o Header</p>
+</ng-template>
+
+<ng-template #contentTemplate>
+  <p>Sou o Content</p>
+</ng-template>
+
+<ng-template #footerTemplate>
+  <p>Sou o Footer</p>
+</ng-template>
+
+<app-card [header]="headerTemplate" [content]="contentTemplate" [footer]="footerTemplate"></app-card>
+
+<!-- <div>
   Div:
   <app-meu-comp></app-meu-comp>
 </div>
@@ -11,7 +25,7 @@
 <ng-template>
   Template:
   <app-meu-comp></app-meu-comp>
-</ng-template>
+</ng-template> -->
 
 
 
