@@ -1,6 +1,7 @@
 import { TesteService } from './services/teste.service';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
+import { UserStatus } from './enums/user-status.enum';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { FilhoComponent } from './filho/filho.component';
  export class AppComponent /*implements OnInit ,AfterViewInit*/ {
   pessoa = {
     nome: 'Kuririn',
-    idade: 1
+    idade: 1,
+    status: UserStatus.INATIVO
   };
 
 

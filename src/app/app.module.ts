@@ -22,6 +22,7 @@ import { CardAvatarSmallDirective } from './components/card/directives/card-avat
 import { CardAvatarLargeDirective } from './components/card/directives/card-avatar-large.directive';
 import { MeuCompComponent } from './meu-comp/meu-comp.component';
 import { CardComponent } from './card/card.component';
+import { UserStatusPipe } from './pipes/user-status.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CardComponent } from './card/card.component';
     CardAvatarSmallDirective,
     CardAvatarLargeDirective,
     MeuCompComponent,
-    CardComponent
+    CardComponent,
+    UserStatusPipe
   ],
   imports: [
     BrowserModule,
