@@ -24,6 +24,10 @@ import { MeuCompComponent } from './meu-comp/meu-comp.component';
 import { CardComponent } from './card/card.component';
 import { UserStatusPipe } from './pipes/user-status.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { UppercaseComponent } from './uppercase/uppercase.component';
+import { LowercaseComponent } from './lowercase/lowercase.component';
+import { TitlecaseComponent } from './titlecase/titlecase.component';
+import { JsonComponent } from './json/json.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,11 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     MeuCompComponent,
     CardComponent,
     UserStatusPipe,
-    TruncatePipe
+    TruncatePipe,
+    UppercaseComponent,
+    LowercaseComponent,
+    TitlecaseComponent,
+    JsonComponent
   ],
   imports: [
     BrowserModule,
