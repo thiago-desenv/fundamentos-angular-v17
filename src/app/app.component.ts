@@ -9,7 +9,13 @@ import { FilhoComponent } from './filho/filho.component';
   styleUrls: ['./app.component.scss']
 })
  export class AppComponent /*implements OnInit ,AfterViewInit*/ {
-  condition: boolean = true;
+  pessoa = {
+    nome: 'Kuririn',
+    idade: 1
+  };
+
+
+  // condition: boolean = true;
   // appBgColor = 'purple';
   // @ViewChild('minhaDiv') divEl!: ElementRef<HTMLDivElement>;
 

@@ -1,8 +1,14 @@
-<app-card>
+<div>
+  {{ pessoa.nome | uppercase}} <br>
+  {{ pessoa.nome }} <br>
+  {{ pessoa | json | uppercase}}
+</div>
+
+<!-- <app-card>
   <ng-template #meuTemplate>
     <app-meu-comp></app-meu-comp>
   </ng-template>
-</app-card>
+</app-card> -->
 
 <!-- <ng-template #headerTemplate>
   <p>Sou o Header</p>
