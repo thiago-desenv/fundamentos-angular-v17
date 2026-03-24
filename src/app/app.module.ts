@@ -23,6 +23,7 @@ import { CardAvatarLargeDirective } from './components/card/directives/card-avat
 import { MeuCompComponent } from './meu-comp/meu-comp.component';
 import { CardComponent } from './card/card.component';
 import { UserStatusPipe } from './pipes/user-status.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { UserStatusPipe } from './pipes/user-status.pipe';
     CardAvatarLargeDirective,
     MeuCompComponent,
     CardComponent,
-    UserStatusPipe
+    UserStatusPipe,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
