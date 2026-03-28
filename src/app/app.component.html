@@ -1,4 +1,11 @@
-<h1>Formato ISO8601</h1>
+<h1>Formatações:</h1>
+
+Curto: {{ '2023-10-21T21:00:00.000Z' | date : 'short' }} <br>
+Médio: {{ '2023-10-21T21:00:00.000Z' | date : 'medium' }} <br>
+Longo: {{ '2023-10-21T21:00:00.000Z' | date : 'long' }} <br>
+Completo: {{ '2023-10-21T21:00:00.000Z' | date : 'full' }}
+
+<!-- <h1>Formato ISO8601</h1>
 <b> Data convertida para região: </b>{{ minhaData | date : 'full' }}
 <br><br>
 <b>Data UTC-0: </b>{{ minhaData | date : 'full' : '+0000' }}
@@ -10,7 +17,7 @@ Timestamp para UTC-0: {{ 1697922000000 | date : 'full' : '+0000' }}
 <h1>Formato Date obj: </h1>
 <b>Data convertida para região: </b>{{ minhaDataObj | date: 'full' }}
 <br><br>
-<b>Data UTC-0: </b>{{ minhaDataObj | date : 'full' : '+0000' }}
+<b>Data UTC-0: </b>{{ minhaDataObj | date : 'full' : '+0000' }} -->
 
 <!-- <app-uppercase></app-uppercase>
 
