@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,9 +29,12 @@ import { LowercaseComponent } from './lowercase/lowercase.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { JsonComponent } from './json/json.component';
 import { SliceComponent } from './slice/slice.component';
-import { DATE_PIPE_DEFAULT_OPTIONS, DatePipeConfig } from '@angular/common';
+import { DATE_PIPE_DEFAULT_OPTIONS, DatePipeConfig, registerLocaleData } from '@angular/common';
+import  localePt  from '@angular/common/locales/pt';
 
 const datePipeconfig: DatePipeConfig = { dateFormat: 'dd/MM/YYYY', timezone: '+0000' };
+
+registerLocaleData(localePt, 'pt-BR')
 
 @NgModule({
   declarations: [
@@ -67,7 +70,16 @@ const datePipeconfig: DatePipeConfig = { dateFormat: 'dd/MM/YYYY', timezone: '+0
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ { provide: DATE_PIPE_DEFAULT_OPTIONS, useValue: datePipeconfig } ],
+  providers: [
+    {
+      provide: DATE_PIPE_DEFAULT_OPTIONS,
+      useValue: datePipeconfig
+    },
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
