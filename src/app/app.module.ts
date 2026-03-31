@@ -29,6 +29,9 @@ import { LowercaseComponent } from './lowercase/lowercase.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { JsonComponent } from './json/json.component';
 import { SliceComponent } from './slice/slice.component';
+import { DATE_PIPE_DEFAULT_OPTIONS, DatePipeConfig } from '@angular/common';
+
+const datePipeconfig: DatePipeConfig = { dateFormat: 'dd/MM/YYYY', timezone: '+0000' };
 
 @NgModule({
   declarations: [
@@ -64,7 +67,7 @@ import { SliceComponent } from './slice/slice.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ { provide: DATE_PIPE_DEFAULT_OPTIONS, useValue: datePipeconfig } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
