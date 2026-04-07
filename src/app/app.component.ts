@@ -15,8 +15,6 @@ import { UserStatus } from './enums/user-status.enum';
   // minhaDataObj: Date = new Date('2023-10-21T21:00:00.000Z');
 
   ngOnInit(): void {
-    const numero = 1200.99;
-    console.log(numero);
 
     // console.log('Data convertida para região: ', new Date(this.minhaData));
     // console.log('Data UTC-0: ', new Date(this.minhaData).toUTCString());

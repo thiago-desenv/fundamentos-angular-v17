@@ -1,4 +1,20 @@
-{{ 12.3 | number : '3.0-2' : 'en-US'}} -> 012.3 <br>
+{{ 1200.99 | currency : 'BRL' }} <br>
+{{ 1200.99 | currency : 'BRL' : 'code'}} <br>
+{{ 1200.99 | currency : 'BRL' : 'symbol'}} <br>
+{{ 1200.99 | currency : 'BRL' : 'symbol-narrow'}} <br>
+{{ 1200.99 | currency : 'BRL' : 'Sem valor '}} <br><br>
+
+{{ 1200.99 | currency : 'CAD' : 'symbol'}} <br>
+{{ 1200.99 | currency : 'CAD' : 'symbol-narrow'}} <br><br>
+
+{{ 1200.99 | currency : 'BRL' : true }} <br>
+{{ 1200.99 | currency : 'BRL' : false }} <br><br>
+
+{{ 1200.99 | currency : 'BRL' : true : '1.2-2' : 'pt-BR' }} <br>
+
+{{ 1200.99 | currency : 'USD' : true : undefined : 'en-US' }} <br>
+
+<!-- {{ 12.3 | number : '3.0-2' : 'en-US'}} -> 012.3 <br>
 {{ 1212.3 | number : '3.0-2' : 'en-US'}} -> 1,212.3 <br>
 {{ 1234.3 | number : '4.0-2' : 'en-US' }} -> 1,234.3 <br>
 {{ 1234.3 | number : '3.0-2' : 'en-US' }} -> 1,234.3 <br>
@@ -20,7 +36,7 @@
 
 {{ 1234.3 | number }} <br>
 
-{{ 1234.3 | number : undefined : 'en-US' }} <br>
+{{ 1234.3 | number : undefined : 'en-US' }} <br> -->
 
 <!-- {{ '2023-10-21T21:00:00.000Z' | date }}
 <br>
