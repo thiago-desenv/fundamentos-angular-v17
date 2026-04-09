@@ -31,6 +31,8 @@ import { JsonComponent } from './json/json.component';
 import { SliceComponent } from './slice/slice.component';
 import { DATE_PIPE_DEFAULT_OPTIONS, DatePipeConfig, registerLocaleData } from '@angular/common';
 import  localePt  from '@angular/common/locales/pt';
+import { ObservableComObjetoComponent } from './components/observable-com-objeto/observable-com-objeto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const datePipeconfig: DatePipeConfig = { dateFormat: 'dd/MM/YYYY', timezone: '+0000' };
 
@@ -63,12 +65,14 @@ registerLocaleData(localePt, 'pt-BR')
     LowercaseComponent,
     TitlecaseComponent,
     JsonComponent,
-    SliceComponent
+    SliceComponent,
+    ObservableComObjetoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     {
