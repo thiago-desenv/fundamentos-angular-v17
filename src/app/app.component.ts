@@ -4,6 +4,8 @@ import { FilhoComponent } from './filho/filho.component';
 import { UserStatus } from './enums/user-status.enum';
 import { UsersService } from './services/users.service';
 import { IUser } from './interfaces/user.interface';
+import { IUserResponse } from './interfaces/user-response';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,7 @@ import { IUser } from './interfaces/user.interface';
 })
  export class AppComponent implements OnInit /*,AfterViewInit*/ {
    userPromisse: Promise<IUser> | undefined;
+   userByIdPromise: Promise<IUserResponse> | undefined;
 
   // minhaData: string = '2023-10-21T21:00:00.000Z';
 
@@ -26,6 +29,10 @@ import { IUser } from './interfaces/user.interface';
 
   ngOnInit(): void {
     this.userPromisse = this._usersService.getUser();
+
+    this.userByIdPromise = lastValueFrom(this._usersService.getUserById(2));
+
+    this._usersService.getUser().then(user => { console.log('User -> ', user) });
 
 
     // console.log('Data convertida para região: ', new Date(this.minhaData));
