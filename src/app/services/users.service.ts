@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { IUserResponse } from '../interfaces/user-response';
 import { usersListResponse } from '../types/users-list-response.type';
+import { IUser } from '../interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,19 @@ import { usersListResponse } from '../types/users-list-response.type';
 export class UsersService {
 
   constructor(private readonly _http: HttpClient) { }
+
+  getUser(): Promise<IUser> {
+    return new Promise<IUser>((resolve, reject) => {
+      setTimeout(() => {
+        resolve({
+          id: 1,
+          name: "Leanne Grahan",
+          username: "Bret",
+          email: "Sincere@april.biz",
+        })
+      }, 3000)
+    });
+  }
 
   getUsers(): Observable<usersListResponse> {
   //   return of([{

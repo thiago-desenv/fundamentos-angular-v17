@@ -2,6 +2,8 @@ import { TesteService } from './services/teste.service';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 import { UserStatus } from './enums/user-status.enum';
+import { UsersService } from './services/users.service';
+import { IUser } from './interfaces/user.interface';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,21 @@ import { UserStatus } from './enums/user-status.enum';
   styleUrls: ['./app.component.scss']
 })
  export class AppComponent implements OnInit /*,AfterViewInit*/ {
+   userPromisse: Promise<IUser> | undefined;
+
   // minhaData: string = '2023-10-21T21:00:00.000Z';
 
   // minhaDataObj: Date = new Date('2023-10-21T21:00:00.000Z');
 
+  constructor(
+    private readonly _usersService: UsersService
+  //   private readonly _elRef: ElementRef,
+  //   private readonly _testeService: TesteService
+  ) { }
+
   ngOnInit(): void {
+    this.userPromisse = this._usersService.getUser();
+
 
     // console.log('Data convertida para região: ', new Date(this.minhaData));
     // console.log('Data UTC-0: ', new Date(this.minhaData).toUTCString());
@@ -34,11 +46,6 @@ import { UserStatus } from './enums/user-status.enum';
   // condition: boolean = true;
   // appBgColor = 'purple';
   // @ViewChild('minhaDiv') divEl!: ElementRef<HTMLDivElement>;
-
-  // constructor(
-  //   private readonly _elRef: ElementRef,
-  //   private readonly _testeService: TesteService
-  // ) { }
 
   // ngOnInit() {
   //   console.log(this._elRef);
@@ -67,15 +74,6 @@ import { UserStatus } from './enums/user-status.enum';
   //   novaDiv.textContent = 'Nova div';
   //   novaDiv.classList.add('bg-red');
   //   this._elRef.nativeElement.appendChild(novaDiv);
-  // }
-
-
-
-
-
-
-  // constructor() {
-  //   console.log('constructor');
   // }
 
   // ngAfterViewInit() {
