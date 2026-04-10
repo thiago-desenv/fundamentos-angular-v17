@@ -5,3 +5,15 @@
 <p>Nome: {{ user.name }}</p>
 <p>Username: {{ user.username }}</p>
 <p>E-mail: {{ user.email }}</p>
+
+<h3>Subscribe pelo async pipe:</h3>
+
+<div *ngIf="(user$ | async) as meuUser">
+  <p>Nome: {{ meuUser.name }}</p>
+  <p>Username: {{ meuUser.username }}</p>
+  <p>E-mail: {{ meuUser.email }}</p>
+</div>
+
+<button (click)="getUserById(1)">1</button>
+<button (click)="getUserById(2)">2</button>
+<button (click)="getUserById(3)">3</button>
