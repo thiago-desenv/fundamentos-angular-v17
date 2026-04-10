@@ -28,6 +28,10 @@ export class ObservableComObjetoComponent implements OnInit, OnDestroy {
     this.userSubs && this.userSubs?.unsubscribe();
   }
 
+  getUsers() {
+    this._userService.getUsers();
+  }
+
   getUserById(id: number) {
     this.user$ = this._userService.getUserById(id);
   }
