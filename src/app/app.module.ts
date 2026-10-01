@@ -34,6 +34,7 @@ import  localePt  from '@angular/common/locales/pt';
 import { ObservableComObjetoComponent } from './components/observable-com-objeto/observable-com-objeto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ObservableComArrayComponent } from './components/observable-com-array/observable-com-array.component';
+import { StatusPipe } from './pipes/status.pipe';
 
 const datePipeconfig: DatePipeConfig = { dateFormat: 'dd/MM/YYYY', timezone: '+0000' };
 
@@ -61,6 +62,7 @@ registerLocaleData(localePt, 'pt-BR')
     MeuCompComponent,
     CardComponent,
     UserStatusPipe,
+    StatusPipe,
     TruncatePipe,
     UppercaseComponent,
     LowercaseComponent,

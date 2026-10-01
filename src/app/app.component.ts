@@ -14,8 +14,35 @@ import { lastValueFrom } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
  export class AppComponent implements OnInit /*,AfterViewInit*/ {
-   userPromisse: Promise<IUser> | undefined;
-   userByIdPromise: Promise<IUserResponse> | undefined;
+  users = [
+    {
+      name: 'Kuririn',
+      status: 1
+    },
+    {
+      name: 'Ju',
+      status: 2
+    },
+    {
+      name: 'Tiana',
+      status: 1
+    },
+    {
+      name: 'Tonha',
+      status: 2
+    },
+  ]
+
+  inactivateUser(userIndex: number) {
+    this.users[userIndex].status = 2;
+  }
+
+  addUser() {
+    this.users.push({ name: 'Thizin', status: 1 });
+  }
+
+  //  userPromisse: Promise<IUser> | undefined;
+  //  userByIdPromise: Promise<IUserResponse> | undefined;
 
   // minhaData: string = '2023-10-21T21:00:00.000Z';
 
@@ -28,11 +55,11 @@ import { lastValueFrom } from 'rxjs';
   ) { }
 
   ngOnInit(): void {
-    this.userPromisse = this._usersService.getUser();
+    // this.userPromisse = this._usersService.getUser();
 
-    this.userByIdPromise = lastValueFrom(this._usersService.getUserById(2));
+    // this.userByIdPromise = lastValueFrom(this._usersService.getUserById(2));
 
-    this._usersService.getUser().then(user => { console.log('User -> ', user) });
+    // this._usersService.getUser().then(user => { console.log('User -> ', user) });
 
 
     // console.log('Data convertida para região: ', new Date(this.minhaData));

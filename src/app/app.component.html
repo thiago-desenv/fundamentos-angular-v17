@@ -1,4 +1,14 @@
-<div *ngIf="(userPromisse | async) as user; else loadingTemplate">
+<div *ngFor="let user of users; let i = index">
+  <p>Nome: {{ user.name }}</p>
+  <p>Status: {{ user.status | status }}</p>
+
+  <button (click)="inactivateUser(i)">Inativar usuário</button>
+  <hr>
+</div>
+
+<button (click)="addUser()">Adicionar</button>
+
+<!-- <div *ngIf="(userPromisse | async) as user; else loadingTemplate">
   <p>Id: {{ user.id }}</p>
   <p>Nome: {{ user.name }}</p>
   <p>Username: {{ user.username }}</p>
@@ -14,7 +24,7 @@
   <p>Nome: {{ userbyId.name }}</p>
   <p>Username: {{ userbyId.username }}</p>
   <p>Email: {{ userbyId.email }}</p>
-</div>
+</div> -->
 
 <!-- <app-observable-com-objeto></app-observable-com-objeto> -->
 <!-- <app-observable-com-array></app-observable-com-array> -->
