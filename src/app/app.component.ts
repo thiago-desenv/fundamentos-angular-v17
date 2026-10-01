@@ -41,6 +41,17 @@ import { lastValueFrom } from 'rxjs';
     this.users.push({ name: 'Thizin', status: 1 });
   }
 
+  getUserStatus(userStatus: number): string {
+    console.log('Status pipe');
+
+    const status: { [key: string]: string } = {
+      1: 'Ativo',
+      2: 'Inativo'
+    };
+
+    return status[userStatus];
+  }
+
   //  userPromisse: Promise<IUser> | undefined;
   //  userByIdPromise: Promise<IUserResponse> | undefined;
 
