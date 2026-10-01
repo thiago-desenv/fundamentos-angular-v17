@@ -52,6 +52,16 @@ import { lastValueFrom } from 'rxjs';
     return status[userStatus];
   }
 
+  getUserImage(userStatus: number) {
+    console.log('getUserImage');
+    const statusImage: { [key: number]: string } = {
+      1: 'assets/images/active-user-icon.png',
+      2: 'assets/images/inactive-user-icon.png'
+    }
+
+    return statusImage[userStatus];
+  }
+
   //  userPromisse: Promise<IUser> | undefined;
   //  userByIdPromise: Promise<IUserResponse> | undefined;
 
