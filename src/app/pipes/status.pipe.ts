@@ -1,10 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'status'
+  name: 'status',
+  pure: false
 })
 export class StatusPipe implements PipeTransform {
+  counter = 0;
+
   transform(userStatus: number): any {
+    this.counter += 1;
+    console.log('StatusPipe Counter:', this.counter);
+
     try {
       if(userStatus === 3) {
         throw new Error('Ocorreu um erro.');
