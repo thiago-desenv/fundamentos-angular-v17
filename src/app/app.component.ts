@@ -17,7 +17,7 @@ import { lastValueFrom } from 'rxjs';
   users = [
     {
       name: 'Kuririn',
-      status: 1
+      status: 3
     },
     {
       name: 'Ju',
